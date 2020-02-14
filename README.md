@@ -137,15 +137,36 @@ Here query parameter would be **response_type=token** instead of code
 
 OAuth2.0 according to specification was only for Authorization and was never meant for Authentication
 
-It was used however even for authentication.
+Due to its popularity it was used however even for authentication as highlighted in cases below:
 
-Later different organizations started to added a layer above OAuth2.0 with their own custom implementation for Authenticaion.
+* Simple login - **Authentication**
+* Single sign-on across sites - **Authentication**
+* Mobile app login - **Authentication**
+* Delegate authorization - **Authorization**
 
-**OpenId Connect** was born as a result to fill the gap that OAuth2.0 had which standardizes Authentication
+For e.g. [Login with facebook] or [Log in with Google] buttons]
+
+Why I cant use it for Authentication?
+
+The main reason is there no starndard way of returning the user information( like name or emailID etc) of the person who logged in.
+There were not many common scopes.
+
+Different organizations started to build a **custom layer/implementation**(We can call them **hacks** as they were usign OAuth under the hood) of their own to achieve their use cases for Authentication.
+
+**OpenId Connect** was born as a result to fill the gap that OAuth2.0 had, which standardizes Authentication
  
 # Open Id Connect
 
 OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. It allows Clients to verify the identity of the End-User based on the authentication
+
+
+
+
+
+## References
+
+
+
 
 
 
