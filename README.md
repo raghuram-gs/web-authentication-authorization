@@ -82,6 +82,8 @@ Code that the authorization server sends to the client upon successful authoriza
 The actual token which the client application needs to get the data from the resource server
 
 
+![](Images/AuthDetailed.png)
+
 
 
 
