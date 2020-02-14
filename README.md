@@ -32,11 +32,34 @@ How a typical authorization works today
 
 ![](Images/AuthorizationExample.png)
 
-## What is OAuth2.0 ?
+## What is OAuth 2.0 ?
 
 OAuth 2.0 is the industry-standard protocol for authorization
 
-OAuth2.0 solves the problem of deledated authorization for e.g.
+It solves the problem of delegated authorization
+
+
+### OAuth 2.0 Terminologies
+
+
+* Resource owner
+
+One who owns the resource. If you have an account with Google or Facebook then you are the owner of these accounts
+
+
+* Client
+
+The application that needs the resource. 
+
+It is the application(E.g Mobile app or Web app) that the resource owner uses which wants the data from the accounts(for e.g Google or facebook) of the resource owner.
+
+* Authorization server
+
+The system which grants the permission upon consent of the resource owner to access data (for e.g. accounts.google.com)
+
+* 
+
+
 
 
 
