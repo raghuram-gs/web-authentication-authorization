@@ -100,14 +100,16 @@ When the authorization server calls the *Redirect URL* with the authorization co
 No. This actually is a server to server communication.
 Which means the call is not happening from the client application but the client's server application which is secure and called as back channel.
 
-**Client application <-----------------> Client Server <----------------------------> Authorization server**
+**Client application <-------- calls ---------> Client Server <---------- communicates with ------------------> Authorization server**
 
 ### More OAuth 2.0 Terminologies
 
 * **Back channel** (Highly secure chanel) ----> Client Server to Auth server communication
 
-* **Front channel** (Highly secure chanel) -----> Client to Auth server communication
+* **Front channel** (Less secure chanel) -----> Client to Auth server communication
 
-In cases where the the client is a pure javascript application without any server application, then the front channel has to be used for fetching the access token.
+In cases where the the client is a pure javascript or web application without any server application, then the front channel has to be used for fetching the access token.
+
+
 
 
