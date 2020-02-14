@@ -111,5 +111,24 @@ Which means the call is not happening from the client application but the client
 In cases where the the client is a pure javascript or web application without any server application, then the front channel has to be used for fetching the access token.
 
 
+## OAuth 2.0 Flows
+
+OAuth 2.0 can be configured for different types of flows based on the type of security needed and application type.
+
+# Authorization code flow
+
+In this flow the **authorization code** is transferred by the **front channel** and the **token exchange** happens through the **back channel**
+
+
+
+
+# Implicit flow
+
+In this flow the token is fetched directly through the **front channel** without the authorization code
+
+Here **ResponseType:Token** instead of code
+
+
+
 
 
