@@ -42,42 +42,42 @@ It solves the problem of delegated authorization
 ### OAuth 2.0 Terminologies
 
 
-* Resource owner
+* **Resource owner**
 
 One who owns the resource. 
 
 If you have an account with Google or Facebook then you are the owner of these accounts and your data in it.
 
 
-* Client
+* **Client**
 
 The application that needs the resource. 
 
 It is the application(E.g Mobile app or Web app) that the resource owner uses which wants the data from the accounts(for e.g Google or facebook) of the resource owner.
 
-* Authorization server
+* **Authorization server**
 
 The system which grants the permission upon consent of the resource owner to access data (for e.g. accounts.google.com)
 
-* Resource server
+* **Resource server**
 
 The system where the resources of the resource owner lie. 
 
 It could be part of the Authorization server or it could be present seperately 
 
-* Authorization grant
+* **Authorization grant**
 
 Its the permission given to the requesting client to access the data by means of an authorization code
 
-* Redirect URL
+* **Redirect URL**
 
 Upon consent of the user it is the URL of the client that Authorization calls with the authorization code
 
-* Authorization code
+* **Authorization code**
 
 Code that the authorization server sends to the client upon successful authorization which is used by the client to get the access token
 
-* Access token
+* **Access token**
 
 The actual token which the client application needs to get the data from the resource server
 
