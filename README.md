@@ -81,6 +81,10 @@ Code that the authorization server sends to the client upon successful authoriza
 
 The actual token which the client application needs to get the data from the resource server
 
+* **Scope**
+
+The part or section of the Resource that the client needs access to (For e.g. Images or contacts or profile from Google)
+What kind of right he needs(For e.g. read or write access -- Not sure if this is part of scope
 
 ![](Images/AuthDetailed.png)
 
@@ -159,7 +163,23 @@ Different organizations started to build a **custom layer/implementation**(We ca
 
 OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. It allows Clients to verify the identity of the End-User based on the authentication
 
+![](Images/OpenIdConnect.png)
 
+* OpenId Connect is for Authentication
+* OAuth 2.0 is for Authorization
+
+What OpenId Connect brings to the table?
+
+* ID Token
+* User info endpoint to get more user information
+* Standard set of scopes
+* Standardized Implementation
+
+How to make this request?
+
+It is the same as the OAuth flow shown above.We just add an additional *Open Id* in the request. 
+
+It then becomes an OAuth(Authorization) and Open Id(Authentication) request
 
 
 
