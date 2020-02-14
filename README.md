@@ -141,11 +141,11 @@ It was used however even for authentication.
 
 Later different organizations started to added a layer above OAuth2.0 with their own custom implementation for Authenticaion.
 
-**OpenId Connect** was born as a result to fill the gap that OAuth2.0 had
+**OpenId Connect** was born as a result to fill the gap that OAuth2.0 had which standardizes Authentication
  
 # Open Id Connect
 
-
+OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. It allows Clients to verify the identity of the End-User based on the authentication
 
 
 
