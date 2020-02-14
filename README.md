@@ -4,7 +4,7 @@
 
 ### A basic simple login or Forms authentication
 
-![](Images/SimpleLogin.png)
+![](Images/BasicLogin.png)
 
 
 
