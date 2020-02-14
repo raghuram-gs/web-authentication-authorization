@@ -122,7 +122,7 @@ In this flow the **authorization code** is transferred by the **front channel** 
 ![](Images/CodeFlow.png)
 
 
-![](Images/AccessTokenCodeFlow.png)
+![](Images/AccessTokenCodeFlow.PNG)
 
 
 
@@ -130,7 +130,23 @@ In this flow the **authorization code** is transferred by the **front channel** 
 
 In this flow the token is fetched directly through the **front channel** without the authorization code
 
-Here **ResponseType:Token** instead of code
+Here query parameter would be **response_type=token** instead of code
+
+
+## Abuse of OAuth2.0 or short comings
+
+OAuth2.0 according to specification was only for Authorization and was never meant for Authentication
+
+It was used however even for authentication.
+
+Later different organizations started to added a layer above OAuth2.0 with their own custom implementation for Authenticaion.
+
+**OpenId Connect** was born as a result to fill the gap that OAuth2.0 had
+ 
+# Open Id Connect
+
+
+
 
 
 
