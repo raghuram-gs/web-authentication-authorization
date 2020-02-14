@@ -44,7 +44,9 @@ It solves the problem of delegated authorization
 
 * Resource owner
 
-One who owns the resource. If you have an account with Google or Facebook then you are the owner of these accounts
+One who owns the resource. 
+
+If you have an account with Google or Facebook then you are the owner of these accounts and your data in it.
 
 
 * Client
@@ -57,8 +59,27 @@ It is the application(E.g Mobile app or Web app) that the resource owner uses wh
 
 The system which grants the permission upon consent of the resource owner to access data (for e.g. accounts.google.com)
 
-* 
+* Resource server
 
+The system where the resources of the resource owner lie. 
+
+It could be part of the Authorization server or it could be present seperately 
+
+* Authorization grant
+
+Its the permission given to the requesting client to access the data by means of an authorization code
+
+* Redirect URL
+
+Upon consent of the user it is the URL of the client that Authorization calls with the authorization code
+
+* Authorization code
+
+Code that the authorization server sends to the client upon successful authorization which is used by the client to get the access token
+
+* Access token
+
+The actual token which the client application needs to get the data from the resource server
 
 
 
