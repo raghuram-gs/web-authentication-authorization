@@ -96,9 +96,9 @@ With the terminologies in mind lets look at the authorization workflow again and
 ![](Images/AuthDetailed.png)
 
 
- > Why we need both Authorization Code and Access token ?
+> **Why we need both Authorization Code and Access token ?**
 
-> Can we not pass the token directly to the Client ? 
+> Can we not pass the token directly to the Client ?
 
 > Why do we have to send the autorization code and then the client again requests for the token ?
 
@@ -106,12 +106,12 @@ With the terminologies in mind lets look at the authorization workflow again and
 
 > When the authorization server calls the *Redirect URL* with the authorization code, the call happens to be in the browser and typically the communication that happens in the front end is considered less secure or vulnerable to security issues even though we trust the browser to some extent
 
-**Doesn't the request to the access token also happen through the browser ?**
+> **Doesn't the request to the access token also happen through the browser ?**
 
-No. This actually is a server to server communication.
-Which means the call is not happening from the client application but the client's server application which is secure and called as back channel.
+> No. This actually is a server to server communication.
+> Which means the call is not happening from the client application but the client's server application which is secure and called as back channel.
 
-**Client application <-------- calls ---------> Client Server <---------- communicates with ------------------> Auth server**
+> **Client application <-------- calls ---------> Client Server <---------- communicates with ------------------> Auth server**
 
 
 ### More OAuth 2.0 Terminologies
@@ -163,11 +163,11 @@ We can call them **hacks** as they were usign OAuth under the hood
 
 For e.g. [Login with facebook] or [Log in with Google] buttons]
 
-**Why cant I use it for Authentication?**
+> **Why cant I use it for Authentication?**
 
-The main reason is there no starndard way of returning the user information( like name or emailID etc) of the person who logged in.
+> The main reason is there no starndard way of returning the user information( like name or emailID etc) of the person who logged in.
 
-There were not many common scopes.
+> There were not many common scopes.
 
 **OpenId Connect** was born as a result to fill the gap that OAuth2.0 had, which standardizes Authentication
  
