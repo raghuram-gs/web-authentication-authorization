@@ -15,31 +15,35 @@ Above system has to
 * Maintain or change the hash algorithm
 * Take care of maintanance of security of the system
 
-That was a very basic system of the past and today we have evolved with the invent of mobile apps and modern web apps 
+That was a very basic system of the past.
 
-Lets look at the uses cases for identity we have today:
+Today, the systems have evolved with the invent of mobile apps and modern web apps 
+
+Below are the uses cases for identity we have today:
 
 * Simple login - Using forms and cookies
 * Single sign-on across sites - SAML
 * Mobile app login - How to achieve ? Cannot have cookies and need a long live session
 * Delegate authorization - How to give access without sharing a password ?
 
-The deledate authorization problem is the one we will be stressing on more now to understand OAuth.
+The deledate authorization problem is the one we will be stressing on more now to understand **OAuth**.
 
 ## The delegate authorization problem
 
 How can I let a website or client access my data without giving my password ?
 
-Lets look at how a typical authorization works today as shown below:
+Lets look at how delegate authorization works:
 
 ![](Images/AuthorizationExample.png)
+
 
 ## What is OAuth 2.0 ?
 
 OAuth 2.0 is the industry-standard protocol for authorization
 
-It solves the problem of delegated authorization
+It solves the problem of delegated authorization.
 
+There are quite a few terminologies used and understanding them makes it simple to go forward.
 
 ### OAuth 2.0 Terminologies
 
@@ -108,6 +112,7 @@ No. This actually is a server to server communication.
 Which means the call is not happening from the client application but the client's server application which is secure and called as back channel.
 
 **Client application <-------- calls ---------> Client Server <---------- communicates with ------------------> Auth server**
+
 
 ### More OAuth 2.0 Terminologies
 
