@@ -96,15 +96,15 @@ With the terminologies in mind lets look at the authorization workflow again and
 ![](Images/AuthDetailed.png)
 
 
-## Why we need both Authorization Code and Access token ?
+ > Why we need both Authorization Code and Access token ?
 
-Can we not pass the token directly to the Client ? 
+> Can we not pass the token directly to the Client ? 
 
-Why do we have to send the autorization code and then the client again requests for the token ?
+> Why do we have to send the autorization code and then the client again requests for the token ?
 
-**Answer**
+> **Answer**
 
-When the authorization server calls the *Redirect URL* with the authorization code, the call happens to be in the browser and typically the communication that happens in the front end is considered less secure or vulnerable to security issues even though we trust the browser to some extent
+> When the authorization server calls the *Redirect URL* with the authorization code, the call happens to be in the browser and typically the communication that happens in the front end is considered less secure or vulnerable to security issues even though we trust the browser to some extent
 
 **Doesn't the request to the access token also happen through the browser ?**
 
