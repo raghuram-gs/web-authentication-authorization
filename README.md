@@ -76,7 +76,7 @@ Its the permission given to the requesting client to access the data by means of
 
 * **Redirect URL**
 
-Upon consent of the user it is the URL of the client that Authorization calls with the authorization code
+Upon consent of the user it is the URL of the client that Authorization server calls with the authorization code
 
 * **Authorization code**
 
