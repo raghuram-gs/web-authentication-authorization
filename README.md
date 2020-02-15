@@ -32,7 +32,7 @@ The deledate authorization problem is the one we will be stressing on more now t
 
 How can I let a website or client access my data without giving my password ?
 
-Lets look at how delegate authorization works:
+Lets look at how authorization is delegated:
 
 ![](Images/AuthorizationExample.png)
 
