@@ -1,4 +1,4 @@
-# OAuth2.0 and OpenId Connect  
+# How I understood OAuth2.0 and OpenId Connect  
 
 ## How authentication has evolved
 
