@@ -177,7 +177,7 @@ What OpenId Connect brings to the table?
 
 How to make this request?
 
-It is the same as the OAuth flow shown above.We just add an additional *Open Id* in the request. 
+It is the same as the OAuth flow shown above.We just add an additional **scope** *Open Id* in the request. 
 
 It then becomes an OAuth(Authorization) and Open Id(Authentication) request
 
