@@ -107,18 +107,18 @@ When the authorization server calls the *Redirect URL* with the authorization co
 No. This actually is a server to server communication.
 Which means the call is not happening from the client application but the client's server application which is secure and called as back channel.
 
-**Client application <-------- calls ---------> Client Server <---------- communicates with ------------------> Authorization server**
+**Client application <-------- calls ---------> Client Server <---------- communicates with ------------------> Auth server**
 
 ### More OAuth 2.0 Terminologies
 
 * **Back channel** (Highly secure chanel) ----> Client Server to Auth server communication
 
 * **Front channel** (Less secure chanel) -----> Client to Auth server communication
+In cases where the the client is a pure javascript or web application without any server application, then the front channel has to be used for fetching the access token.
 
 * **PKCE** Proof key for code exchange ------> This is the code(**secret code**) that the client server will send during a back channel request along with the authorization code to get the access token.
 It provides an additionall level of security as anybody who intercepts the authorization code will not be able to fetch the access token.
 
-In cases where the the client is a pure javascript or web application without any server application, then the front channel has to be used for fetching the access token.
 
 ## OAuth 2.0 Flows
 
@@ -134,7 +134,7 @@ In this flow the **authorization code** is transferred by the **front channel** 
 ![](Images/AccessTokenCodeFlow.PNG)
 
 
-## Implicit flow
+### Implicit flow
 
 In this flow the token is fetched directly through the **front channel** without the authorization code
 
@@ -145,27 +145,32 @@ Here query parameter would be **response_type=token** instead of code
 
 OAuth2.0 according to specification was only for Authorization and was never meant for Authentication
 
-Due to its popularity it was used however even for authentication as highlighted in cases below:
+However, due to its popularity it was used even for authentication as highlighted in cases below:
 
 * Simple login - **Authentication**
 * Single sign-on across sites - **Authentication**
 * Mobile app login - **Authentication**
 * Delegate authorization - **Authorization**
 
+Different organizations started to build a **custom layer/implementation** of their own to achieve their use cases for Authentication.
+
+We can call them **hacks** as they were usign OAuth under the hood
+
 For e.g. [Login with facebook] or [Log in with Google] buttons]
 
-**Why I cant use it for Authentication?**
+**Why cant I use it for Authentication?**
 
 The main reason is there no starndard way of returning the user information( like name or emailID etc) of the person who logged in.
-There were not many common scopes.
 
-Different organizations started to build a **custom layer/implementation**(We can call them **hacks** as they were usign OAuth under the hood) of their own to achieve their use cases for Authentication.
+There were not many common scopes.
 
 **OpenId Connect** was born as a result to fill the gap that OAuth2.0 had, which standardizes Authentication
  
 ## Open Id Connect
 
-OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. It allows Clients to verify the identity of the End-User based on the authentication
+OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol.
+
+It allows Clients to verify the identity of the End-User based on the authentication
 
 ![](Images/OpenIdConnect.png)
 
@@ -181,11 +186,13 @@ OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. 
 
 **How to make this request?**
 
-It is the same as the OAuth flow shown above.We just add an additional **scope** *Open Id* in the request. 
+It is the same as the OAuth code flow shown above.
+
+We just add an additional **scope** *Open Id* in the request. 
 
 It then becomes an OAuth(Authorization) and Open Id(Authentication) request
 
-Refer to the Request/Response highlighted in green:
+Refer to the Request/Response highlighted in green in the diagram below:
 
 ![](Images/OAuthOpenId.png)
 
