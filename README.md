@@ -1,6 +1,8 @@
 # How I understood OAuth2.0 and OpenId Connect  
 
-## How authentication has evolved
+## The evolution of authentication
+
+Lets look at how a classic or simple login system works:
 
 ### A basic simple login or Forms authentication
 
@@ -13,22 +15,22 @@ Above system has to
 * Maintain or change the hash algorithm
 * Take care of maintanance of security of the system
 
+That was a very basic system of the past and today we have evolved with the invent of mobile apps and modern web apps 
 
-The login mechanism has evolved and we have new scenarios like mobile apps and web apps which is described below:
-
-# Use case for identity 
+Lets look at the uses cases for identity we have today:
 
 * Simple login - Using forms and cookies
 * Single sign-on across sites - SAML
 * Mobile app login - How to achieve ? Cannot have cookies and need a long live session
 * Delegate authorization - How to give access without sharing a password ?
 
+The deledate authorization problem is the one we will be stressing on more now to understand OAuth.
 
-**The delegate authorization problem**
+## The delegate authorization problem
 
 How can I let a website or client access my data without giving my password ?
 
-How a typical authorization works today
+Lets look at how a typical authorization works today as shown below:
 
 ![](Images/AuthorizationExample.png)
 
@@ -40,7 +42,6 @@ It solves the problem of delegated authorization
 
 
 ### OAuth 2.0 Terminologies
-
 
 * **Resource owner**
 
@@ -86,10 +87,12 @@ The actual token which the client application needs to get the data from the res
 The part or section of the Resource that the client needs access to (For e.g. Images or contacts or profile from Google)
 What kind of right he needs(For e.g. read or write access -- Not sure if this is part of scope
 
+With the terminologies in mind lets look at the authorization workflow again and understand the flow:
+
 ![](Images/AuthDetailed.png)
 
 
-## Why we need Authorization Code and Access token ?
+## Why we need both Authorization Code and Access token ?
 
 Can we not pass the token directly to the Client ? 
 
@@ -99,7 +102,7 @@ Why do we have to send the autorization code and then the client again requests 
 
 When the authorization server calls the *Redirect URL* with the authorization code, the call happens to be in the browser and typically the communication that happens in the front end is considered less secure or vulnerable to security issues even though we trust the browser to some extent
 
-**Then doesn't the request to the access token also happen through the browser ?**
+**Doesn't the request to the access token also happen through the browser ?**
 
 No. This actually is a server to server communication.
 Which means the call is not happening from the client application but the client's server application which is secure and called as back channel.
@@ -112,14 +115,16 @@ Which means the call is not happening from the client application but the client
 
 * **Front channel** (Less secure chanel) -----> Client to Auth server communication
 
-In cases where the the client is a pure javascript or web application without any server application, then the front channel has to be used for fetching the access token.
+* **PKCE** Proof key for code exchange ------> This is the code(**secret code**) that the client server will send during a back channel request along with the authorization code to get the access token.
+It provides an additionall level of security as anybody who intercepts the authorization code will not be able to fetch the access token.
 
+In cases where the the client is a pure javascript or web application without any server application, then the front channel has to be used for fetching the access token.
 
 ## OAuth 2.0 Flows
 
 OAuth 2.0 can be configured for different types of flows based on the type of security needed and application type.
 
-# Authorization code flow
+### Authorization code flow
 
 In this flow the **authorization code** is transferred by the **front channel** and the **token exchange** happens through the **back channel**
 
@@ -129,8 +134,7 @@ In this flow the **authorization code** is transferred by the **front channel** 
 ![](Images/AccessTokenCodeFlow.PNG)
 
 
-
-# Implicit flow
+## Implicit flow
 
 In this flow the token is fetched directly through the **front channel** without the authorization code
 
@@ -150,7 +154,7 @@ Due to its popularity it was used however even for authentication as highlighted
 
 For e.g. [Login with facebook] or [Log in with Google] buttons]
 
-Why I cant use it for Authentication?
+**Why I cant use it for Authentication?**
 
 The main reason is there no starndard way of returning the user information( like name or emailID etc) of the person who logged in.
 There were not many common scopes.
@@ -159,7 +163,7 @@ Different organizations started to build a **custom layer/implementation**(We ca
 
 **OpenId Connect** was born as a result to fill the gap that OAuth2.0 had, which standardizes Authentication
  
-# Open Id Connect
+## Open Id Connect
 
 OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. It allows Clients to verify the identity of the End-User based on the authentication
 
@@ -168,14 +172,14 @@ OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. 
 * OpenId Connect is for Authentication
 * OAuth 2.0 is for Authorization
 
-What OpenId Connect brings to the table?
+**What OpenId Connect brings to the table?**
 
 * ID Token
 * User info endpoint to get more user information
 * Standard set of scopes
 * Standardized Implementation
 
-How to make this request?
+**How to make this request?**
 
 It is the same as the OAuth flow shown above.We just add an additional **scope** *Open Id* in the request. 
 
@@ -197,6 +201,13 @@ Use Open Id Connect for:
 
 * Logging the user in
 * Making your accounts available in other systems
+
+Which flow to use:
+
+* Web application with a backend server - Use Authorization code flow
+* Native mobile application - User Authorization code flow with PKCE
+* Javascript app with server backend - Use implicit flow
+* Microservices and API - Use client credentials flow
 
 ## Note
 I have not detailed the http Request/Response in a greter detail here to keep it simple which I plan to study and write up in future
@@ -221,16 +232,11 @@ Most of my write up here is based or inspired by this video
 
 So my suggestion is to first look at this video and then start the pluralsight or other courses
 
+Other links:
 
+https://www.oauth.com/
 
+https://jwt.io/
 
-
-
-
-
-
-
-
-
-
+https://openid.net/connect/
 
