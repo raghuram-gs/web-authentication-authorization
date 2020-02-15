@@ -186,8 +186,45 @@ Refer to the Request/Response highlighted in green:
 ![](Images/OAuthOpenId.png)
 
 
+## Summary
+
+Use OAuth for:
+
+* Granting access to your Api
+* Getting access to user data in other system
+
+Use Open Id Connect for:
+
+* Logging the user in
+* Making your accounts available in other systems
+
+## Note
+I have not detailed the http Request/Response in a greter detail here to keep it simple which I plan to study and write up in future
 
 ## References
+
+I started off with the below Pluralsight courses
+
+**Introduction to OAuth2.0, OpenId Connect and JSON Web Token(JWT) by Dominick Baier**
+
+I was overwhelmed with the terminologies and details.
+
+Then I went ahead with the below course which I stopped half way through as I badly now wanted to understand the basics:
+
+**Securing ASP.NET Core 2 with OAuth2.0 and OpenID Connect by Kevin Dockx**
+
+I searched for more simple blogs and videos that would make me understand the concepts and then I stumbled upon this **life saver** video by **Nate Barbettini**:
+
+https://www.youtube.com/watch?v=996OiexHze0
+
+Most of my write up here is based or inspired by this video
+
+So my suggestion is to first look at this video and then start the pluralsight or other courses
+
+
+
+
+
 
 
 
