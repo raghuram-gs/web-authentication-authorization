@@ -181,6 +181,10 @@ It is the same as the OAuth flow shown above.We just add an additional **scope**
 
 It then becomes an OAuth(Authorization) and Open Id(Authentication) request
 
+Refer to the Request/Response highlighted in green:
+
+![](Images/OAuthOpenId.png)
+
 
 
 ## References
