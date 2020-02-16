@@ -133,11 +133,15 @@ OAuth 2.0 can be configured for different types of flows based on the type of se
 
 In this flow the **authorization code** is transferred by the **front channel** and the **token exchange** happens through the **back channel**
 
+
+Request for Authorization code:
+
 ![](Images/CodeFlow.png)
 
+Rquest for token:
 
 ![](Images/AccessTokenCodeFlow.PNG)
-
+  
 
 ### Implicit flow
 
