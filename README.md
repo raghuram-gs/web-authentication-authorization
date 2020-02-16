@@ -138,7 +138,7 @@ Request for Authorization code:
 
 ![](Images/CodeFlow.png)
 
-Rquest for token:
+Request for token:
 
 ![](Images/AccessTokenCodeFlow.PNG)
   
