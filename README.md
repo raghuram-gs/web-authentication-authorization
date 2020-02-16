@@ -1,4 +1,6 @@
-# How I understood OAuth2.0 and OpenId Connect  
+# How I understood OAuth2.0 and OpenId Connect concepts
+
+I have documented below my notes as I went through some courses to understand the concepts.
 
 ## The evolution of authentication
 
@@ -17,6 +19,8 @@ Above system has to
 
 That was a very basic system of the past.
 
+**Is it still relevant today?**
+
 Today, the systems have evolved with the invent of mobile apps and modern web apps 
 
 Below are the uses cases for identity we have today:
@@ -32,7 +36,7 @@ The deledate authorization problem is the one we will be stressing on more now t
 
 How can I let a website or client access my data without giving my password ?
 
-Lets look at how authorization is delegated:
+Lets understand how authorization is delegated by looking at an example:
 
 ![](Images/AuthorizationExample.png)
 
