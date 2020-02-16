@@ -142,6 +142,9 @@ Request for token:
 
 ![](Images/AccessTokenCodeFlow.PNG)
   
+ This code flow has a long live access
+ 
+ Used for Confidential clients
 
 ### Implicit flow
 
@@ -151,6 +154,10 @@ Here query parameter would be **response_type=token** instead of code
 
 ![](Images/ImplicitFlow.PNG)
 
+
+ This code flow has a short live access
+ 
+ Used for Public clients
 
 ## Abuse of OAuth2.0 or short comings
 
