@@ -40,12 +40,15 @@ Lets understand how authorization is delegated by looking at an example:
 
 ![](Images/AuthorizationExample.png)
 
+We have a "Login with Google" button on the client and by clicking it we can observe that the client doesn't take in the username and password of Google account, but instead directs the user to accounts.google.com site which can be trusted by the user to enter his credentials.
+
+Hence we can say that the authorization was delegated to google.com from the client and then redirected to the client after login and consent from the user.
 
 ## What is OAuth 2.0 ?
 
-OAuth 2.0 is the industry-standard protocol for authorization
+OAuth 2.0 is the industry-standard protocol for authorization.
 
-It solves the problem of delegated authorization.
+It sets the rules, terminologies and standards for delegated authorization.
 
 There are quite a few terminologies used and understanding them makes it simple to go forward.
 
