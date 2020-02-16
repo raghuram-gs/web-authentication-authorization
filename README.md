@@ -149,6 +149,8 @@ In this flow the token is fetched directly through the **front channel** without
 
 Here query parameter would be **response_type=token** instead of code
 
+![](Images/ImplicitFlow.PNG)
+
 
 ## Abuse of OAuth2.0 or short comings
 
