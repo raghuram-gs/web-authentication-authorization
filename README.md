@@ -1,6 +1,6 @@
 # How I understood OAuth2.0 and OpenId Connect concepts
 
-I have documented below my notes as I went through some courses to understand the concepts.
+I have documented below my notes as I went through courses and materials to understand the concepts.
 
 ## The evolution of authentication
 
