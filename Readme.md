@@ -1,4 +1,4 @@
-# How I understood OAuth2.0 and OpenId Connect concepts
+# OAuth2.0 and OpenId Connect concepts
 
 ## The evolution of authentication
 
